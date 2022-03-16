@@ -2,10 +2,10 @@ import React, {Component} from "react";
 
 export default class Ride extends Component {
 
-    displayArray() {
+    displayStationPath() {
         let result = "["
         for (let i in this.props.stationPath) {
-            if ((this.props.stationPath.length - i) == 1) {
+            if ((this.props.stationPath.length - i) === 1) {
                 result += ` ${this.props.stationPath[i]}`
             } else{
                 result += ` ${this.props.stationPath[i]}, `
@@ -28,7 +28,7 @@ export default class Ride extends Component {
                             <label className='d-block'> Ride id: <span>  {this.props.id} </span></label>
                             <label className='d-block'>Origin station: <span> {this.props.originStation}  </span>
                             </label>
-                            <label className='d-block'>Station path: <span> {this.displayArray()}  </span> </label>
+                            <label className='d-block'>Station path: <span> {this.displayStationPath()}  </span> </label>
                             <label className='d-block'>Date: <span>  </span> {this.props.date} </label>
                             <label className='d-block'>Distance: <span> {this.props.distance} </span> </label>
 
