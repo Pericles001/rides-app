@@ -1,14 +1,16 @@
-import React, {useState} from "react";
-import {prettyFormat} from "@testing-library/react";
+import React from "react";
+import Select from "react-select";
 
-let elem1, elem2 = []
+var tabDataCity = []
+var tabDataState = []
 
 export class Filter extends React.Component {
+
 
     renderStateFilter() {
         return this.props.state.map((item, index) => {
             return (
-                <option key={index} value={item}>{item}</option>
+                tabDataState.push({value: item, label: item})
             )
         })
     }
@@ -17,7 +19,7 @@ export class Filter extends React.Component {
     renderCityFilter() {
         return this.props.city.map((item, index) => {
             return (
-                <option key={index} value={item}>{item}</option>
+                tabDataCity.push({value: item, label: item})
             )
         })
     }
@@ -35,20 +37,30 @@ export class Filter extends React.Component {
                 </svg>
                 <button type='btn' className='text-white btn btn-sm btn-dark border-0'
                         data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Filter rides either by state or by city" style={{cursor: 'pointer'}}>Filter
+                        title="Filter rides either by state or by city" style={{cursor: 'pointer', borderRadius: '5px'}}
+                        onClick={this.props.onFilter}>Filter
                 </button>
 
                 <div className='card  text-white border-0' style={{width: '150px', background: '#323131'}}>
                     <span className='card-title'></span>
-                    <select className='bg-dark text-white border-dark border-0 m-2' style={{borderRadius: '5px'}}
-                            name='State'>
-                        {this.renderStateFilter()}
-                    </select>
-                    <select className='bg-dark text-white border-dark border-0 mt-2' name='City'>
-                        {this.renderCityFilter()}
-                    </select>
-                    <div className='row'>
 
+
+                    <div className='row'>
+                        <span className='d-none'>{this.renderCityFilter()} </span>
+                        <Select
+
+                            name='City'
+                            options={tabDataCity}
+                            placeholder='City'
+                            onChange={this.props.onTypeFilter}></Select>
+                    </div>
+                    <div className='row'>
+                        <span className='d-none'>{this.renderStateFilter()} </span>
+                        <Select
+                            name='State'
+                            options={tabDataState}
+                            placeholder='State'
+                            onChange={this.props.onTypeFilter}></Select>
                     </div>
                 </div>
 
