@@ -2,6 +2,10 @@
 
 Nothing much but a simple app to practice in react
 
+
+![Image](https://b5d3p7t2.rocketcdn.me/wp-content/uploads/2020/07/Western-Riding.jpg.webp)
+
+
 ## About this project
 
   This project is a simple web application that allows users to create and share rides.
