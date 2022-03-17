@@ -60,7 +60,7 @@ export default class App extends Component {
         })
         counter1 = pastRides.length;
         this.setState({
-            counter1: counter1 == 0 ? 1 : counter1
+            counter1: counter1 === 0 ? 1 : counter1
         })
         return counter1;
 
@@ -84,7 +84,7 @@ export default class App extends Component {
 
         counter2 = upComing.length;
         this.setState({
-            counter2: counter2 == 0 ? 1 : counter2
+            counter2: counter2 === 0 ? 1 : counter2
         })
         return counter2;
     }
