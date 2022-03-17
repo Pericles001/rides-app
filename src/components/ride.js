@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Filter} from "./filter";
+
 export default class Ride extends Component {
 
     displayStationPath() {

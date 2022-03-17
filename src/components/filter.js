@@ -34,7 +34,7 @@ export class Filter extends React.Component {
                 <button type='btn' className='text-white btn btn-sm btn-dark border-0'
                         data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Filter rides either by state or by city" style={{cursor: 'pointer', borderRadius: '5px'}}
-                       onClick={this.props.onFilter} >Filter
+                        onClick={this.props.onFilter}>Filter
                 </button>
 
                 <div className='card  text-white border-0' style={{width: '130px', background: '#323131'}}>
@@ -50,7 +50,7 @@ export class Filter extends React.Component {
                         options={tabDataCity}
                         placeholder='City'
                         onChange={this.props.onCityChange}
-                       />
+                    />
 
 
                     <Select
@@ -60,7 +60,7 @@ export class Filter extends React.Component {
                         options={tabDataState}
                         placeholder='State'
                         onChange={this.props.onStateChange}
-                        />
+                    />
                 </div>
                 <div className='row'>
 

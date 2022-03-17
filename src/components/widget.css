@@ -1,8 +1,8 @@
-.fork{
+.fork {
     font-weight: lighter;
     transition: all 0.3s ease-in-out;
 }
 
-.fork:hover{
+.fork:hover {
     font-weight: bold;
 }

@@ -17,7 +17,6 @@ export default class App extends Component {
     }
 
 
-
     handleCityChange = (city) => {
         this.setState({
             city: city
@@ -95,7 +94,8 @@ export default class App extends Component {
             <React.Fragment>
                 <NavBar/>
 
-                <Widget count1={this.state.counter1} count2={this.state.counter2}  upcoming={this.handleUpComing} past={this.handlePastRides}  />
+                <Widget count1={this.state.counter1} count2={this.state.counter2} upcoming={this.handleUpComing}
+                        past={this.handlePastRides}/>
 
                 <Filter city={this.state.rides.map(
                     ride => ride.city
