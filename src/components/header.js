@@ -11,10 +11,11 @@ export const NavBar = () => {
                         <h4 className='text-white '>Edvora</h4>
                     </span>
                 </a>
-                <span className='fw-bold text-white' >
+                <span className='fw-bold text-white'>
                         {user.name}
 
-                    <img className='m-4 rounded-circle' style={{width:'50px'}} src={user.url} alt='user profile image'/>
+                    <img className='m-4 rounded-circle' style={{width: '50px'}} src={user.url}
+                         alt='user profile image'/>
                 </span>
             </div>
         </nav>

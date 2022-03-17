@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-
+import {Filter} from "./filter";
 export default class Ride extends Component {
 
     displayStationPath() {
@@ -16,12 +16,14 @@ export default class Ride extends Component {
     }
 
     render() {
+
         return (
-            <div className='container'>
+
+            <div className='container mt-5 ms-4'>
                 <div className="col-sm-12 bg-black bg-opacity-75 border-4 border-dark text-white m-3"
                      style={{borderRadius: '5px'}}>
                     <div className='col-12 p-1'>
-                        <div className="row row">
+                        <div className="row">
                             <div className='col-4'>
                                 <img src={this.props.src} alt=""/>
                             </div>
@@ -36,9 +38,11 @@ export default class Ride extends Component {
 
                             </div>
                             <div className="col-4 d-inline">
-                                <button type='btn' className='btn btn-sm btn-dark btn-outline-dark m-2 text-white'> {this.props.cityName} </button>
+                                <button type='btn'
+                                        className='btn btn-sm btn-dark btn-outline-dark m-2 text-white'> {this.props.cityName} </button>
 
-                                <button type='btn' className='btn btn-sm btn-dark btn-outline-dark text-white'> {this.props.stateName} </button>
+                                <button type='btn'
+                                        className='btn btn-sm btn-dark btn-outline-dark text-white'> {this.props.stateName} </button>
 
                             </div>
 
@@ -47,6 +51,8 @@ export default class Ride extends Component {
                 </div>
 
             </div>
+
+
         )
     }
 }
