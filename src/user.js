@@ -1,0 +1,1 @@
+export const user = {"station_code": 2, "name": "Kermit Michael", "url": "https://picsum.photos/200"}
