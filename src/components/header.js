@@ -14,7 +14,7 @@ export const NavBar = () => {
                 <span className='fw-bold text-white' >
                         {user.name}
 
-                    <img className='m-4' src={user.url} alt='user profile image'/>
+                    <img className='m-4 rounded-circle' style={{width:'50px'}} src={user.url} alt='user profile image'/>
                 </span>
             </div>
         </nav>
