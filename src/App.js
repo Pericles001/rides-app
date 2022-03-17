@@ -2,10 +2,10 @@ import React, {Component} from "react";
 import 'bootstrap/dist/css/bootstrap.css'
 import {rides} from "./rides";
 import {user} from "./user";
-import {NavBar} from "./Components/header";
-import {Filter, tabDataCity, tabDataState} from "./Components/filter";
-import {Widget} from "./Components/widget";
-import Ride from "./Components/ride";
+import {NavBar} from "./components/Header";
+import {Filter, tabDataCity, tabDataState} from "./components/Filter";
+import {Widget} from "./components/Widget";
+import Ride from "./components/Ride";
 import './App.css'
 
 export default class App extends Component {

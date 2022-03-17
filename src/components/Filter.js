@@ -1,6 +1,6 @@
 import React from "react";
 import Select from "react-select";
-import {customStyles} from "./styleSelect";
+import {customStyles} from "./StyleSelect";
 
 export let tabDataCity = [];
 export let tabDataState = [];

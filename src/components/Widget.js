@@ -1,7 +1,7 @@
 import React from "react";
 import {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './widget.css';
+import './Widget.css';
 
 export class Widget extends Component {
     render() {
