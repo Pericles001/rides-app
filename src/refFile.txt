@@ -1,34 +1,0 @@
-api url: https://assessment.api.vweb.app/rides
-
-
-
-https://assessment.api.vweb.app/user
-
-Nearest ride:  A nearest ride is a ride that includes your station code or a number closest to your station code in the station_path array.  For example, your station code is 40. So any ride that has your station code as nearest number in station_path array.
-
-    That would be  id 002 the most nearest as it has your station code 40 in the station_path array.
-    Then id 003 has 41 from station_path array is nearest to your station code 40.
-
-Then id 001 has 42 from station_path array nearest to your station code 40.   Hence it would be 002 > 003 > 001.
-    Please note: You cannot use the same ride twice  Distance :  Nearest station for your ride is your station code.
-    Example: For id 002, your station code is 40 and your ride also stops at your station so the distance is 40-40 = 0 for id 001, your station code is 40 and your ride stops at station 42, so the distance is 42-40 = 2
-
-    import * as React from 'react';
-    import { DataGridPro } from '@mui/x-data-grid-pro';
-    import { useDemoData } from '@mui/x-data-grid-generator';
-
-    const VISIBLE_FIELDS = ['name', 'rating', 'country', 'dateCreated', 'isAdmin'];
-
-    export default function BasicExampleDataGridPro() {
-      const { data } = useDemoData({
-        dataSet: 'Employee',
-        visibleFields: VISIBLE_FIELDS,
-        rowLength: 100,
-      });
-
-      return (
-        <div style={{ height: 400, width: '100%' }}>
-          <DataGridPro {...data} />
-        </div>
-      );
-    }
