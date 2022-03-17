@@ -2,8 +2,8 @@ import React from "react";
 import Select from "react-select";
 import {customStyles} from "./styleSelect";
 
-let tabDataCity = [];
-let tabDataState = [];
+export let tabDataCity = [];
+export let tabDataState = [];
 
 export class Filter extends React.Component {
 
@@ -34,7 +34,7 @@ export class Filter extends React.Component {
                 <button type='btn' className='text-white btn btn-sm btn-dark border-0'
                         data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Filter rides either by state or by city" style={{cursor: 'pointer', borderRadius: '5px'}}
-                        onClick={this.props.onFilter}>Filter
+                       onClick={this.props.onFilter} >Filter
                 </button>
 
                 <div className='card  text-white border-0' style={{width: '130px', background: '#323131'}}>
@@ -44,21 +44,23 @@ export class Filter extends React.Component {
 
                     <Select
                         styles={customStyles}
-                        className=' col-12  '
+                        className=' col-12 selectCity '
                         classNamePrefix="react-select"
                         name='City'
                         options={tabDataCity}
                         placeholder='City'
-                        onChange={this.props.onTypeFilter}/>
+                        onChange={this.props.onCityChange}
+                       />
 
 
                     <Select
                         styles={customStyles}
-                        className='col-12 mt-3 '
+                        className='col-12 mt-3 selectState'
                         name='State'
                         options={tabDataState}
                         placeholder='State'
-                        onChange={this.props.onTypeFilter}/>
+                        onChange={this.props.onStateChange}
+                        />
                 </div>
                 <div className='row'>
 
