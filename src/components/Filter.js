@@ -62,11 +62,6 @@ export class Filter extends React.Component {
                         onChange={this.props.onStateChange}
                     />
                 </div>
-                <div className='row'>
-
-                </div>
-
-
             </div>
 
         )
