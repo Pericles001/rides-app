@@ -38,7 +38,7 @@ export class Filter extends React.Component {
                 </button>
 
                 <div className='card  text-white border-0' style={{width: '130px', background: '#323131'}}>
-                    <span className='card-title'></span>
+                    <span className='card-title' />
                     <span className='d-none'>{this.renderStateFilter()} </span>
                     < span className='d-none'>{this.renderCityFilter()}</span>
 
