@@ -15,7 +15,7 @@ export const NavBar = () => {
                         {user.name}
 
                     <img className='m-4 rounded-circle' style={{width: '50px'}} src={user.url}
-                         alt='user profile image'/>
+                         alt='user profile'/>
                 </span>
             </div>
         </nav>
